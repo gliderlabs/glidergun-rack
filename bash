@@ -1,0 +1,5 @@
+latest linux64 https://github.com/robxu9/bash-static/releases/download/4.3.30/bash-linux 65a630834c2ab2fdbc4746b330ebf718
+latest darwin64 https://github.com/robxu9/bash-static/releases/download/4.3.30/bash-osx aea1afebbb44bd5e4c51f6fc7921f448
+
+4.3 linux64 https://github.com/robxu9/bash-static/releases/download/4.3.30/bash-linux 65a630834c2ab2fdbc4746b330ebf718
+4.3 darwin64 https://github.com/robxu9/bash-static/releases/download/4.3.30/bash-osx aea1afebbb44bd5e4c51f6fc7921f448
