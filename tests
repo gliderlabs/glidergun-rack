@@ -1,11 +1,19 @@
 #!/bin/bash
 
+checksum() {
+	if which md5sum > /dev/null; then
+		md5sum | awk '{print $1}'
+	else
+		md5
+	fi
+}
+
 download-and-check() {
-	while IFS=' ' read v t url expected_checksum; do
-		echo "---> $v $t $url $expected_checksum"
-		checksum="$(curl --fail -Ls $url | md5)"
-		if [[ "$checksum" != "$expected_checksum" ]]; then
-			echo "!! checksum failed. got: $checksum"
+	while IFS=' ' read v t url expected; do
+		echo "---> $v $t $url $expected"
+		output="$(curl --fail -Ls $url | checksum)"
+		if [[ "$output" != "$expected" ]]; then
+			echo "!! checksum failed. got: $output"
 			exit 2
 		fi
 	done
