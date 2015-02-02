@@ -1,0 +1,1 @@
+[![Circle CI](https://circleci.com/gh/gliderlabs/glidergun-rack.png?style=shield)](https://circleci.com/gh/gliderlabs/glidergun-rack)
