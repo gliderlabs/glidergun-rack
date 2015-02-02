@@ -1,0 +1,27 @@
+#!/bin/bash
+
+download-and-check() {
+	while IFS=' ' read v t url expected_checksum; do
+		echo "---> $v $t $url $expected_checksum"
+		checksum="$(curl --fail -Ls $url | md5)"
+		if [[ "$checksum" != "$expected_checksum" ]]; then
+			echo "!! checksum failed. got: $checksum"
+			exit 2
+		fi
+	done
+}
+
+main() {
+	set -eo pipefail; [[ "$TRACE" ]] && set -x
+	for package in ./index/*; do
+		if [[ "$(basename $package)" != "_version" ]]; then
+			echo "===> $(basename $package)"
+			cat "$package" \
+				| grep -v '^\s*$' \
+				| grep -v '^#' \
+				| download-and-check
+		fi
+	done
+}
+
+main

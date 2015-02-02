@@ -1,2 +1,0 @@
-# install: ./awscli-bundle/install -i $PREFIX
-latest * https://s3.amazonaws.com/aws-cli/awscli-bundle.zip 4aebea9b8c5b6c88a5f0a7ac288707d5
