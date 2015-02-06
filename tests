@@ -12,7 +12,7 @@ download-and-check() {
 	while IFS=' ' read v t url expected; do
 		echo "---> $v $t $url $expected"
 		output="$(curl --fail -Ls $url | checksum)"
-		if [[ "$output" != "$expected" ]]; then
+		if [[ "$expected" && "$output" != "$expected" ]]; then
 			echo "!! checksum failed. got: $output"
 			exit 2
 		fi
