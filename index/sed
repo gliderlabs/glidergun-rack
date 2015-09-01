@@ -1,0 +1,7 @@
+# install: mv sed $PREFIX/bin
+
+latest linux_amd64 https://github.com/sequenceiq/docker-gnused-linux-bin/releases/download/v4.2.2/sed-linux-4.2.2.tgz a9404833974aea2356e2c984d30fed9e
+latest darwin_amd64 https://github.com/sequenceiq/gnused-osx-bin/releases/download/v4.2.2/sed-darwin-4.2.2.tgz f0fb77edffd31acfa0e2916ba87f7f1a
+
+4.2.2 linux_amd64 https://github.com/sequenceiq/docker-gnused-linux-bin/releases/download/v4.2.2/sed-linux-4.2.2.tgz a9404833974aea2356e2c984d30fed9e
+4.2.2 darwin_amd64 https://github.com/sequenceiq/gnused-osx-bin/releases/download/v4.2.2/sed-darwin-4.2.2.tgz f0fb77edffd31acfa0e2916ba87f7f1a
